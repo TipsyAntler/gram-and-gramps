@@ -27,6 +27,21 @@ function initStoryFilters(){
     select.innerHTML=`<option value="">${facetDefaults[key]||'Any'}</option>`+values.map(value=>`<option value="${value}">${value} (${counts[value]})</option>`).join('');
   });
 
+  // Allow the family tree (and future archive pages) to link directly into a filtered story collection.
+  const params=new URLSearchParams(location.search);
+  const requestedSpeaker=params.get('speaker');
+  if(['Gram','Gramps','Together'].includes(requestedSpeaker)){
+    speaker=requestedSpeaker;
+    $$('.filter-chip').forEach(b=>b.classList.toggle('active',b.dataset.filter===speaker));
+  }
+  const facetParams={topics:'topic',locations:'location',people:'person',when:'when'};
+  selects.forEach(select=>{
+    const requested=params.get(facetParams[select.dataset.facet]);
+    if(requested&&[...select.options].some(o=>o.value===requested))select.value=requested;
+  });
+  if(search&&params.get('search'))search.value=params.get('search');
+  if(sortSelect&&params.get('sort')&&[...sortSelect.options].some(o=>o.value===params.get('sort')))sortSelect.value=params.get('sort');
+
   function activeFilters(){return speaker!=='All'||(search&&search.value.trim())||selects.some(s=>s.value)}
   function sortedStories(stories){
     const mode=sortSelect?sortSelect.value:'recording';
