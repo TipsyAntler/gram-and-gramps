@@ -65,8 +65,8 @@ window.STORY_FEATURES={
   14:{
     image:'https://drive.google.com/thumbnail?id=13tcVTRSSjpERJ4INrKq806AOi_ioxHRe&sz=w1600',
     photoNote:'1940s family archive portrait from the Navy/courtship years.',
-    contextTitle:'Navy — and merchant ships',
-    context:'The family’s “Merchant Marine” shorthand and Gramps’ repeated “Navy” wording fit together: his obituary identifies him as a U.S. Navy Signalman 2nd Class in the Naval Armed Guard, Navy detachments assigned aboard merchant vessels.'
+    contextTitle:'U.S. Navy Armed Guard',
+    context:'Gramps served in the U.S. Navy from 1943–1946 as a Signalman 2nd Class in the Naval Armed Guard. Naval Armed Guard sailors were Navy personnel assigned to protect and serve aboard merchant vessels during wartime.'
   },
   15:{
     image:'https://drive.google.com/thumbnail?id=1aNm1iPt4Da3knNPaZfGOZIRrXg5eAtfp&sz=w1600',
