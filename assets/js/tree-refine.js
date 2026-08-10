@@ -3,9 +3,9 @@
   const openButton = document.querySelector('[data-tree-open]');
   if (!frame) return;
 
-  // Refine Topola's opening view without touching the stable data-loading path.
-  // Keep Sam as the focus so Marietta appears with him in the central hourglass,
-  // while stripping visual metadata that makes the chart feel like an org chart.
+  // Topola removes the surrounding @ signs from GEDCOM pointers internally,
+  // so its URL selection must use I182064743652 rather than @I182064743652@.
+  // Start on Gramps in the hourglass view; Gram appears alongside him as spouse.
   const refine = () => {
     const current = frame.src;
     const marker = '#/view?';
@@ -14,12 +14,12 @@
 
     const base = current.slice(0, index + marker.length);
     const params = new URLSearchParams(current.slice(index + marker.length));
-    params.set('indi', '@I182064743652@');
+    params.set('indi', 'I182064743652');
     params.set('c', 'n');
     params.set('i', 'h');
     params.set('s', 'h');
     params.set('p', 'h');
-    params.set('sidePanel', 'true');
+    params.set('sidePanel', 'false');
 
     const refinedUrl = base + params.toString();
     if (refinedUrl !== current) frame.src = refinedUrl;
