@@ -100,7 +100,7 @@ window.STORY_FEATURES={
   },
   19:{
     image:'https://drive.google.com/thumbnail?id=15W7SKjbnL00aPyCAhoBMu4YuJ6ql0tGW&sz=w1600',
-    photoNote:'Early family archive portrait chosen for the childhood chapter; exact identities and date are still being confirmed.'
+    photoNote:'Early family archive portrait chosen for the childhood story; exact identities and date are still being confirmed.'
   },
   20:{
     image:'https://drive.google.com/thumbnail?id=1EocYIkNESEXDM4gA_kCPXtGnxYezQvR3&sz=w1600',
@@ -125,7 +125,7 @@ window.STORY_FEATURES={
   },
   23:{
     image:'https://drive.google.com/thumbnail?id=1kwxAuhGXrUoForYWCaDsAE-daSKJYfl4&sz=w1600',
-    photoNote:'A playful family archive photograph that perfectly matches the physical-comedy energy of this chapter; exact date and identities are still being confirmed.'
+    photoNote:'A playful family archive photograph that perfectly matches the physical-comedy energy of this story; exact date and identities are still being confirmed.'
   },
   24:{
     image:'https://drive.google.com/thumbnail?id=1wkvva49S6KEDsi8oKHylaV87v0GTKe8a&sz=w1600',
