@@ -27,9 +27,15 @@ const AUDIO_FILES={
 25:{id:'1s104-zmjUsRyoYuc5lFriulAJz4ev-Rv'},
 26:{id:'18EK97prNtVuixw1dkm8SsR1cF_ch8RJq'}
 };
+window.FULL_RECORDING={
+  id:'12W_yX-T3vB-PZUkfbe1aN_b2EAhYWlmL',
+  preview:'https://drive.google.com/file/d/12W_yX-T3vB-PZUkfbe1aN_b2EAhYWlmL/preview',
+  url:'https://drive.google.com/file/d/12W_yX-T3vB-PZUkfbe1aN_b2EAhYWlmL/view'
+};
 Object.entries(AUDIO_FILES).forEach(([storyId,file])=>{
   const story=window.STORIES&&window.STORIES.find(s=>s.id===Number(storyId));
   if(!story)return;
-  story.audio=`https://drive.google.com/uc?export=download&id=${file.id}`;
+  story.audioId=file.id;
+  story.audioPreview=`https://drive.google.com/file/d/${file.id}/preview`;
   story.audioUrl=`https://drive.google.com/file/d/${file.id}/view`;
 });
