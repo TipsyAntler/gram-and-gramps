@@ -1,16 +1,14 @@
 storyImage=function(s){
   const f=window.STORY_FEATURES&&window.STORY_FEATURES[s.id];
   if(f&&f.image)return f.image;
-  if([14,15,17,18,21,22].includes(s.id))return ARCHIVE_IMAGES.hero;
-  if([11,23,24,25].includes(s.id))return ARCHIVE_IMAGES.later;
-  if([0,2,6,7,9].includes(s.id))return ARCHIVE_IMAGES.twins;
   return ARCHIVE_IMAGES.wedding;
 };
 function locationMarkup(f){
   if(!f.locations||!f.locations.length)return '';
   const cards=f.locations.map(loc=>{
     const href=`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.query)}`;
-    return `<article class="location-card"><div class="location-pin" aria-hidden="true">⌖</div><div><div class="eyebrow">On the map</div><h3>${loc.label}</h3><p>${loc.note||''}</p><a class="button map-button" href="${href}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div></article>`;
+    const embed=`https://www.google.com/maps?q=${encodeURIComponent(loc.query)}&output=embed`;
+    return `<article class="location-card"><div class="location-map-wrap"><iframe class="location-map" src="${embed}" title="Map of ${loc.label}" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></div><div class="location-copy"><div class="eyebrow">On the map</div><h3>${loc.label}</h3><p>${loc.note||''}</p><a class="button map-button" href="${href}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div></article>`;
   }).join('');
   return `<section class="location-section"><div class="section-head mini"><div><div class="eyebrow">Where it happened</div><h2>Put the story on the map.</h2></div></div><div class="location-grid">${cards}</div></section>`;
 }
