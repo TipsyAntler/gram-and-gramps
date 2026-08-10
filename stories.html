@@ -8,7 +8,7 @@
 <main>
 <section class="page-hero wrap"><div class="eyebrow">The listening collection</div><h1>The Stories</h1><p>Twenty-seven chapters from the December 26, 2018 recording. Pick one, press play, and let Gram and Gramps tell it themselves. Want the whole afternoon instead? <a href="listen.html" style="text-decoration:underline;text-underline-offset:3px">Listen straight through.</a></p></section>
 <section class="section tight wrap">
-  <div class="story-filter-panel" aria-label="Filter the story collection">
+  <div class="story-filter-panel" aria-label="Filter and sort the story collection">
     <div class="story-filter-top">
       <label class="story-search"><span>Find a story</span><input id="storySearch" type="search" placeholder="Try “hat,” “Stevens,” “Peluso”…" autocomplete="off"></label>
       <button class="clear-filters" id="clearStoryFilters" type="button" hidden>Clear all filters</button>
@@ -28,7 +28,19 @@
       <label class="facet-field"><span>Featured people</span><select class="facet-select" id="peopleFilter" data-facet="people"><option value="">Anyone</option></select></label>
       <label class="facet-field"><span>When</span><select class="facet-select" id="whenFilter" data-facet="when"><option value="">Any time</option></select></label>
     </div>
-    <div class="filter-footer"><div class="filter-summary" id="filterSummary">27 stories</div><div class="filter-hint">Filters work together — try Gramps + WWII &amp; Navy + Vancouver.</div></div>
+    <div class="filter-footer">
+      <div class="filter-summary" id="filterSummary">27 stories</div>
+      <div class="filter-actions">
+        <label class="sort-field"><span>Sort by</span><select id="storySort">
+          <option value="recording">Recording order</option>
+          <option value="chronological">Life chronology (approx.)</option>
+          <option value="shortest">Shortest first</option>
+          <option value="longest">Longest first</option>
+          <option value="title">Title A–Z</option>
+        </select></label>
+        <div class="filter-hint">Filters work together — try Gramps + WWII &amp; Navy + Vancouver.</div>
+      </div>
+    </div>
   </div>
   <div id="storiesGrid" class="story-grid"></div>
 </section>
