@@ -17,8 +17,10 @@ function moreMarkup(storyId){
   if(!r||!r.cards||!r.cards.length)return '';
   const cards=r.cards.map(item=>{
     const media=item.image?`<div class="index-card-media"><img src="${item.image}" alt="Archive image connected to this story."></div>`:'';
+    const youtube=item.youtube?`<div class="video-wrap"><iframe src="${item.youtube}" title="Find Sam's Hat television segment" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`:'';
     const spotify=item.spotify?`<div class="spotify-wrap"><iframe src="${item.spotify}" title="Spotify player" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></div>`:'';
-    return `<article class="index-card"><div class="index-card-kicker">${item.kicker||'From the files'}</div><h3>${item.title}</h3><p>${item.body}</p>${media}${spotify}</article>`;
+    const link=item.link?`<a class="index-card-link" href="${item.link}" target="_blank" rel="noopener">${item.linkLabel||'Open source ↗'}</a>`:'';
+    return `<article class="index-card"><div class="index-card-kicker">${item.kicker||'From the files'}</div><h3>${item.title}</h3><p>${item.body}</p>${media}${youtube}${spotify}${link}</article>`;
   }).join('');
   return `<section class="more-section"><div class="section-head mini"><div><div class="eyebrow">From Gramps' desk</div><h2>More to the story.</h2></div></div><div class="more-grid">${cards}</div></section>`;
 }
