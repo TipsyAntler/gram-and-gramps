@@ -1,0 +1,35 @@
+const AUDIO_FILES={
+0:{id:'1o1cUzw6IpzBt8Z17AdbpFKylVKleg39J'},
+1:{id:'19_H3eo1l3ra-xHTH2d3AcF4KjOTH1OZQ'},
+2:{id:'1Nd7bJMN5oys_OC9PB5gClCriCH-RA5hd'},
+3:{id:'1AsoUqEh9g-6iYm612bo9PhdF_1GuZ24B'},
+4:{id:'1koDbrEU4XVh88eQDQup32ILcMu6u06XR'},
+5:{id:'1lbFRSUd6R6UWR6gISUKH5QCXLjbp8JBM'},
+6:{id:'1kaeEODYIVrMoLqdGy4Thr1UmcnybDVK4'},
+7:{id:'1ZOuCmgZps0zvyliJQUXFOHNo48I4VTdF'},
+8:{id:'14wMfDsi4BVNEXmZDKCUY1rt4lM9v8tLq'},
+9:{id:'1Mjmb_AIVeyLCRfCbvKftxV2MzcnzKqpS'},
+10:{id:'1aSPYXofTzR6twAI9LMmmusKxRvo7q5hK'},
+11:{id:'1HHL_2ZAPsKa0rVzgFUZW1VlPnzoRwzCc'},
+12:{id:'1x13KZbHiM1d3HUwh9qy6__l19XHwxn-T'},
+13:{id:'1-G3L3UElmsCTev4ahYhzvYr153_i-lYj'},
+14:{id:'14sst-BYViLFW-sp-D1dZnKqD4pLGNjRT'},
+15:{id:'1Vn5epPqgZ-BSQigtlzgbl2J8TW6wMc5G'},
+16:{id:'1Z_jPbko-Q_Myz8VANa-gFjCMpUi4aKh9'},
+17:{id:'1IgGD1hTM_VV3ilkTw1aAgc1jIe1MBWeF'},
+18:{id:'1HH4Iry2j1jKn818hTNK2MqL7mW5sO1Xt'},
+19:{id:'14FVSuZPr-NYUCHdlnUbthgKfJmf33F-0'},
+20:{id:'1oONJf1UKRhYxYsK1bQNRDoNLYgxDpWQ-'},
+21:{id:'1HOKbHSECozEvU9PEyM6siLmrsjvm0-lk'},
+22:{id:'18fnDgzHEvV2XxwlvHZbrgWCMbEdCLsy_'},
+23:{id:'1fAkCNDMntPYRu_ZdBb2OgMd1-LBtMOvA'},
+24:{id:'16XliDTMauf92AiiU5-tOFkdL-FZO0XSG'},
+25:{id:'1s104-zmjUsRyoYuc5lFriulAJz4ev-Rv'},
+26:{id:'18EK97prNtVuixw1dkm8SsR1cF_ch8RJq'}
+};
+Object.entries(AUDIO_FILES).forEach(([storyId,file])=>{
+  const story=window.STORIES&&window.STORIES.find(s=>s.id===Number(storyId));
+  if(!story)return;
+  story.audio=`https://drive.google.com/uc?export=download&id=${file.id}`;
+  story.audioUrl=`https://drive.google.com/file/d/${file.id}/view`;
+});
