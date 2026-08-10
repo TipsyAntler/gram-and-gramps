@@ -11,7 +11,7 @@
   const seconds=t=>t.split(':').map(Number).reduce((a,n)=>a*60+n,0);
   const dur=s=>{const total=Math.max(0,seconds(s.end)-seconds(s.start)),m=Math.floor(total/60),x=total%60;return `${m}:${String(x).padStart(2,'0')}`};
   function rows(){
-    list.innerHTML=STORIES.map((s,i)=>`<article class="chapter-row" data-index="${i}"><div class="chapter-num">${pad(s.id)}</div><div class="chapter-copy"><h3>${s.title}</h3><p>${s.start} · ${dur(s)} · ${s.speaker}</p></div><div class="chapter-actions"><button class="chapter-play" data-play="${i}">Load chapter</button><a class="chapter-story" href="story.html?id=${s.id}">Story page ↗</a></div></article>`).join('');
+    list.innerHTML=STORIES.map((s,i)=>`<article class="chapter-row" data-index="${i}"><div class="chapter-num">${pad(s.id)}</div><div class="chapter-copy"><h3>${s.title}</h3><p>${dur(s)} · Primary Speaker: ${s.speaker}</p></div><div class="chapter-actions"><button class="chapter-play" data-play="${i}">Load story</button><a class="chapter-story" href="story.html?id=${s.id}">Story page ↗</a></div></article>`).join('');
     list.querySelectorAll('[data-play]').forEach(btn=>btn.addEventListener('click',()=>selectChapter(Number(btn.dataset.play),true)));
   }
   function paint(){
@@ -33,7 +33,7 @@
     const s=STORIES[current];
     nowNumber.textContent=pad(s.id);
     nowTitle.textContent=s.title;
-    nowMeta.textContent=`${s.speaker} · ${dur(s)}`;
+    nowMeta.textContent=`Primary Speaker: ${s.speaker} · ${dur(s)}`;
     frame.src=s.audioPreview||'';
     fallback.href=s.audioUrl||'#';
     paint();
