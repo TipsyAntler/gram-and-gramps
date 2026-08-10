@@ -1,6 +1,7 @@
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 function toSeconds(t){return t.split(':').map(Number).reduce((a,n)=>a*60+n,0)}
 function duration(a,b){let s=Math.max(0,toSeconds(b)-toSeconds(a)),m=Math.floor(s/60),sec=s%60;return `${m}:${String(sec).padStart(2,'0')}`}
+function storyLength(s){return Math.max(0,toSeconds(s.end)-toSeconds(s.start))}
 function padId(id){return String(id).padStart(3,'0')}
 function storyImage(s){if([14,15,17,18,21,22].includes(s.id))return ARCHIVE_IMAGES.hero;if([11,23,24,25].includes(s.id))return ARCHIVE_IMAGES.later;if([0,2,6,7,9].includes(s.id))return ARCHIVE_IMAGES.twins;return ARCHIVE_IMAGES.wedding}
 function audioMarkup(s){if(s.audioPreview){const backup=s.audioUrl?`<a class="audio-backup" href="${s.audioUrl}" target="_blank" rel="noopener">Open this recording in Google Drive ↗</a>`:'';return `<div class="drive-audio-player"><iframe src="${s.audioPreview}" title="Audio player for ${s.title}" loading="lazy" allow="autoplay"></iframe>${backup}</div>`}if(s.audioUrl)return `<a class="button primary" href="${s.audioUrl}" target="_blank" rel="noopener">▶ Listen to this story</a>`;return `<span class="audio-pending">Audio ready to connect</span>`}
@@ -13,6 +14,7 @@ function initStoryFilters(){
   const search=$('#storySearch');
   const clear=$('#clearStoryFilters');
   const summary=$('#filterSummary');
+  const sortSelect=$('#storySort');
   const selects=$$('.facet-select');
   let speaker='All';
 
@@ -26,6 +28,15 @@ function initStoryFilters(){
   });
 
   function activeFilters(){return speaker!=='All'||(search&&search.value.trim())||selects.some(s=>s.value)}
+  function sortedStories(stories){
+    const mode=sortSelect?sortSelect.value:'recording';
+    const ordered=[...stories];
+    if(mode==='chronological')return ordered.sort((a,b)=>((meta[a.id]&&meta[a.id].chrono)??9999)-((meta[b.id]&&meta[b.id].chrono)??9999)||a.id-b.id);
+    if(mode==='shortest')return ordered.sort((a,b)=>storyLength(a)-storyLength(b)||a.id-b.id);
+    if(mode==='longest')return ordered.sort((a,b)=>storyLength(b)-storyLength(a)||a.id-b.id);
+    if(mode==='title')return ordered.sort((a,b)=>a.title.localeCompare(b.title));
+    return ordered.sort((a,b)=>a.id-b.id);
+  }
   function applyFilters(){
     const q=(search?search.value:'').trim().toLowerCase();
     const facetValues=Object.fromEntries(selects.map(s=>[s.dataset.facet,s.value]));
@@ -39,8 +50,9 @@ function initStoryFilters(){
       }
       return true;
     });
-    if(filtered.length)renderStories(grid,filtered);else grid.innerHTML='<div class="filter-empty"><strong>No stories found.</strong>Try widening one of the filters or clearing the search.</div>';
-    if(summary)summary.textContent=`${filtered.length} ${filtered.length===1?'story':'stories'}`;
+    const ordered=sortedStories(filtered);
+    if(ordered.length)renderStories(grid,ordered);else grid.innerHTML='<div class="filter-empty"><strong>No stories found.</strong>Try widening one of the filters or clearing the search.</div>';
+    if(summary)summary.textContent=`${ordered.length} ${ordered.length===1?'story':'stories'}`;
     if(clear)clear.hidden=!activeFilters();
   }
 
@@ -51,6 +63,7 @@ function initStoryFilters(){
     applyFilters();
   }));
   selects.forEach(select=>select.addEventListener('change',applyFilters));
+  if(sortSelect)sortSelect.addEventListener('change',applyFilters);
   if(search)search.addEventListener('input',applyFilters);
   if(clear)clear.addEventListener('click',()=>{
     speaker='All';
