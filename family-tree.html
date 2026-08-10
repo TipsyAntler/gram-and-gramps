@@ -12,8 +12,8 @@
   <div class="tree-intro-actions"><a class="button primary" href="family-tree.html?full=1" target="_blank" rel="noopener">Open tree larger ↗</a></div>
 </section>
 <section class="tree-shell" aria-label="Interactive Tridente family tree">
-  <iframe class="topola-frame" title="Interactive Tridente family tree" src="https://pewu.github.io/topola-viewer/#/view?embedded=true&indi=%40I182064743652%40&i=h&sidePanel=true" loading="eager" allowfullscreen></iframe>
-  <div class="tree-error-message"><strong>The family tree couldn’t load in this browser.</strong><span>Try refreshing this page or opening it in a current browser.</span></div>
+  <iframe class="topola-frame" title="Interactive Tridente family tree" src="https://pewu.github.io/topola-viewer/#/view?embedded=true&i=h&sidePanel=true" loading="eager" allowfullscreen></iframe>
+  <div class="tree-error-message"><strong>The interactive family tree is having trouble loading.</strong><span>Refresh once; if it still doesn’t appear, we’re still working on this viewer.</span></div>
 </section>
 <section class="section tight wrap tree-notes">
   <div class="tree-note-card"><div class="eyebrow">About this tree</div><h2>Built from the family GEDCOM.</h2><p>This is a privacy-safe web copy of the larger Ancestry family tree. For living relatives, the public version keeps names and family connections but omits dates, places and other private details. Deceased relatives retain the genealogy details that help place the family in time and place.</p></div>
@@ -21,5 +21,8 @@
 </section>
 </main>
 <footer class="site-footer"><div class="footer-inner wrap"><div>Tridente Family Oral History · Recorded December 26, 2018</div><div>Family tree rendered with Topola Genealogy Viewer.</div></div></footer>
-<script src="assets/js/site.js"></script><script src="assets/js/tree.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+<script src="assets/js/tree.js"></script>
+<script src="assets/js/tree-pako-retry.js"></script>
 </body></html>
