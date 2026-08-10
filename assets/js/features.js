@@ -21,7 +21,7 @@ window.STORY_FEATURES={
     photoNote:'Family archive childhood snapshot; exact child and date are still being confirmed.'
   },
   4:{
-    image:'https://drive.google.com/thumbnail?id=1q9MwuVSoGHMf3uQK8t79OWD98IQhj-Kt&sz=w1600',
+    image:'https://drive.google.com/thumbnail?id=1q9MwuVSoGHMf3uQK8c79OWD98IQhj-Kt&sz=w1600',
     photoNote:'Young-adult family archive portrait from roughly the dental-office era; identification and date are still being confirmed.'
   },
   5:{
