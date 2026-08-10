@@ -5,7 +5,8 @@ window.STORY_FEATURES={
     quote:'“When I was a detective?”',
     quoteBy:'Gram',
     contextTitle:'The park has a name',
-    context:'Gram’s geography points to Church Square Park in Hoboken: Our Lady of Grace overlooks the park, matching the scene she describes in the story.'
+    context:'Gram’s geography points to Church Square Park in Hoboken: Our Lady of Grace overlooks the park, matching the scene she describes in the story.',
+    locations:[{label:'Church Square Park',query:'Church Square Park, 400 Garden Street, Hoboken, NJ 07030',note:'A confirmed scene anchor for the Detective Story. The exact location of Dr. Peluso’s office is still being researched.'}]
   },
   4:{
     image:'https://drive.google.com/thumbnail?id=1q9MwuVSoGHMf3uQK8c79OWD98IQhj-Kt&sz=w1600',
@@ -14,6 +15,12 @@ window.STORY_FEATURES={
   5:{
     image:'https://drive.google.com/thumbnail?id=1q9MwuVSoGHMf3uQK8c79OWD98IQhj-Kt&sz=w1600',
     photoNote:'Young-adult family archive portrait from roughly the dental-office era; identification/date in progress.'
+  },
+  8:{
+    locations:[{label:'Stevens Institute of Technology',query:'Stevens Institute of Technology, Hoboken, NJ',note:'The setting for Gram’s Stevens stories. She worked there for decades, beginning full-time in 1962.'}]
+  },
+  10:{
+    locations:[{label:'Stevens Institute of Technology',query:'Stevens Institute of Technology, Hoboken, NJ',note:'The setting for the Joe Introne / boss story and a major part of Gram’s working life.'}]
   },
   14:{
     image:'https://drive.google.com/thumbnail?id=13tcVTRSSjpERJ4INrKq806AOi_ioxHRe&sz=w1600',
@@ -24,6 +31,9 @@ window.STORY_FEATURES={
   15:{
     image:'https://drive.google.com/thumbnail?id=13tcVTRSSjpERJ4INrKq806AOi_ioxHRe&sz=w1600',
     photoNote:'1940s family archive portrait from the Navy/courtship years.'
+  },
+  16:{
+    locations:[{label:'Saints Peter & Paul Church',query:'Saints Peter and Paul Church, Hoboken, NJ',note:'Gramps places the teenage produce-store scam near Saints Peter & Paul. The exact vegetable store is still an open research question.'}]
   },
   17:{
     image:'https://drive.google.com/thumbnail?id=1x3E_4IKussM-jF6tnSuOe5GIQ10CoBiD&sz=w1600',
@@ -43,7 +53,8 @@ window.STORY_FEATURES={
     quote:'“So I lost my hat. And I love my hat.”',
     quoteBy:'Gramps',
     contextTitle:'A likely date: August 14, 1945',
-    context:'Gramps says his ship had just reached New Westminster when Japan surrendered and he went into Vancouver for the street celebration. Vancouver archival photographs date the city’s V-J Day crowds to August 14, 1945.'
+    context:'Gramps says his ship had just reached New Westminster when Japan surrendered and he went into Vancouver for the street celebration. Vancouver archival photographs date the city’s V-J Day crowds to August 14, 1945.',
+    locations:[{label:'Vancouver, British Columbia',query:'Vancouver, British Columbia, Canada',note:'The V-J Day street celebration where the hat disappeared. Gramps says his ship had just arrived in nearby New Westminster.'}]
   },
   26:{
     image:'https://drive.google.com/thumbnail?id=1KoYNYfRr_HRzNand59FvsZWySONmcmwL&sz=w1600',
