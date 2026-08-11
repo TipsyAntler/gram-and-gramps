@@ -19,12 +19,14 @@ function applyEditorialOverrides(){
     patchStory(9,{people:'Mamom; Sam'});
     patchStory(10,{people:'Joe Introne; Charlotte; Sam'});
     patchStory(11,{people:'Jackie'});
+    patchStory(13,{people:'Sergio (grandfather); Uncle Mario/Morris'});
     patchStory(14,{people:'Mama; Papa'});
     patchStory(15,{people:''});
     patchStory(16,{people:'Uncle Johnny'});
     patchStory(17,{people:'Mama; Marietta'});
     patchStory(18,{people:'Marietta; Petey; Viola; Dr. Peluso'});
     patchStory(19,{people:'Mama; Papa; Mary Ruppel; Bill Supple; Ryan'});
+    patchStory(22,{people:'Marietta; Frank Sinatra; Dick Todd'});
     patchStory(24,{people:'Conrad; Nunpop; Mamom'});
     patchStory(25,{people:'Conrad; Uncle Tommy; Louis'});
     patchStory(26,{people:'Dr. Peluso; Mrs. Peluso; Jack; Pete; Isabel; Sam'});
