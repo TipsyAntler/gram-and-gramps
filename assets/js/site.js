@@ -82,5 +82,6 @@ function initStoryFilters(){
 }
 function renderFeatured(){const t=$('#featuredStories');if(t)renderStories(t,[1,18,21,5,17,10].map(id=>STORIES.find(s=>s.id===id)))}
 function renderStoryPage(){const root=$('#storyPage');if(!root)return;const id=Number(new URLSearchParams(location.search).get('id')??1),s=STORIES.find(x=>x.id===id)||STORIES[1];document.title=`${s.title} — Gram & Gramps`;root.innerHTML=`<section class="story-hero"><img src="${storyImage(s)}" style="${storyFocusStyle(s)}" alt=""><div class="story-hero-overlay"></div><div class="story-hero-copy wrap"><div class="eyebrow light">${padId(s.id)} · ${s.group} · ${duration(s.start,s.end)}</div><h1>${s.title}</h1><p>${s.teaser}</p></div></section>`}
+function normalizeNav(){const n=$('.site-nav');if(!n)return;const explore=n.querySelector('a[href="stories.html"]'),complete=n.querySelector('a[href="listen.html"]');if(complete)complete.textContent='The Complete Recording';if(explore&&complete)n.insertBefore(explore,complete)}
 function initMenu(){const b=$('.menu-toggle'),n=$('.site-nav');if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'))}
-document.addEventListener('DOMContentLoaded',()=>{initMenu();renderFeatured();initStoryFilters();renderStoryPage()});
+document.addEventListener('DOMContentLoaded',()=>{normalizeNav();initMenu();renderFeatured();initStoryFilters();renderStoryPage()});
