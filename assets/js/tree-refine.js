@@ -5,7 +5,8 @@
 
   // Topola removes the surrounding @ signs from GEDCOM pointers internally,
   // so its URL selection must use I182064743652 rather than @I182064743652@.
-  // Start on Gramps in the hourglass view; Gram appears alongside him as spouse.
+  // Start on Gramps in the hourglass view with his details panel already open;
+  // Gram appears alongside him as spouse.
   const refine = () => {
     const current = frame.src;
     const marker = '#/view?';
@@ -19,7 +20,7 @@
     params.set('i', 'h');
     params.set('s', 'h');
     params.set('p', 'h');
-    params.set('sidePanel', 'false');
+    params.set('sidePanel', 'true');
 
     const refinedUrl = base + params.toString();
     if (refinedUrl !== current) frame.src = refinedUrl;
