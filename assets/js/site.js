@@ -82,7 +82,7 @@ function initStoryFilters(){
   if(clear)clear.addEventListener('click',()=>{
     speaker='All';
     $$('.filter-chip').forEach(b=>b.classList.toggle('active',b.dataset.filter==='All'));
-    selects.forEach(s=>s.value='';
+    selects.forEach(s=>s.value='');
     if(search)search.value='';
     applyFilters();
   });
