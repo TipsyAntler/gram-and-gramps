@@ -14,7 +14,7 @@
   feature(6,{image:'https://drive.google.com/thumbnail?id=1uDkWC1lfMEfI4SRvEZ7ov0Cl_iW1Wmvt&sz=w1800',quote:'“If somebody spoke to me with a dialect, I don’t know why, I would just answer them with their dialect.”',quoteBy:'Marietta',focus:'50% 30%',mobileFocus:'50% 20%'});
   feature(7,{quote:'“I seem to get in trouble all the time.”',quoteBy:'Marietta'});
   feature(8,{quote:'“I’m taking Stevens to court.”',quoteBy:'Marietta'});
-  feature(9,{image:'https://drive.google.com/thumbnail?id=18tyb34bGgdbzcU9YrBax2IH4_cjRlJuV&sz=w1800',quote:'“And they just cracked up. It was a sight to see.”',quoteBy:'Marietta',focus:'50% 36%',mobileFocus:'50% 28%'});
+  feature(9,{image:'https://drive.google.com/thumbnail?id=1MJA2WRjSsl3waaRebiGanG0dg9UdJVm9&sz=w1800',quote:'“And they just cracked up. It was a sight to see.”',quoteBy:'Marietta',focus:'29% 66%',mobileFocus:'28% 66%'});
   feature(10,{image:'https://drive.google.com/thumbnail?id=1MRC4sQ7sUo91FAmOM54jIxCXMwRdP4ZP&sz=w1800',quote:'“One more word out of you, and brother, you’re on that floor.”',quoteBy:'Marietta',focus:'50% 30%',mobileFocus:'50% 24%'});
   feature(11,{quote:'“That’s why we’re married 71 years. He knows better.”',quoteBy:'Marietta'});
   feature(12,{quote:'“Now get up and get the hell out of my house.”',quoteBy:'Marietta'});
