@@ -59,12 +59,12 @@ window.STORY_FEATURES={
     photoNote:'Mid-century family archive event portrait; exact occasion and date are still being confirmed.'
   },
   13:{
-    image:'https://drive.google.com/thumbnail?id=1PmFsTWEEwGGoln276oqmFGrsakOUbZd8&sz=w1600',
-    photoNote:'Family archive portrait from the middle decades of the story; exact identities and date are still being confirmed.'
+    image:'https://drive.google.com/thumbnail?id=1c4fS4jBRjPwQsQDhCHp2Z-Pfv075R8vO&sz=w1600',
+    photoNote:'Family archive file titled “1st communion 1932.jpg” — a direct childhood-era visual for Gramps’ introduction.'
   },
   14:{
-    image:'https://drive.google.com/thumbnail?id=13tcVTRSSjpERJ4INrKq806AOi_ioxHRe&sz=w1600',
-    photoNote:'1940s family archive portrait from the Navy/courtship years.',
+    image:'https://drive.google.com/thumbnail?id=1o3TGOGPFJbwprmLPKYgwnNgg8dHlKUiO&sz=w1600',
+    photoNote:'Family archive file titled “1943 Boot camp leave.jpg” — Sam in Navy uniform during leave with family.',
     contextTitle:'U.S. Navy Armed Guard',
     context:'Gramps served in the U.S. Navy from 1943–1946 as a Signalman 2nd Class in the Naval Armed Guard. Naval Armed Guard sailors were Navy personnel assigned to protect and serve aboard merchant vessels during wartime.'
   },
@@ -87,8 +87,8 @@ window.STORY_FEATURES={
     ]
   },
   18:{
-    image:'https://drive.google.com/thumbnail?id=1okK2FC3Glop_cIByMPb-aXLi84xvxGSy&sz=w1600',
-    photoNote:'Family archive wedding portrait, estimated late 1940s; exact occasion is being confirmed.',
+    image:'https://drive.google.com/thumbnail?id=1Uh_XdKLO6fqC6CX1g2PMrkD-f9YbdxrS&sz=w1600',
+    photoNote:'Family archive file titled “Engagement Party Oct 1945.jpg” — Marietta and Sam together while he was still in Navy uniform.',
     quote:'“This is the girl I have to meet because I’m gonna marry her.”',
     quoteBy:'Gramps, remembering himself at 17',
     contextTitle:'He dates the beginning to 1942',
@@ -99,12 +99,12 @@ window.STORY_FEATURES={
     ]
   },
   19:{
-    image:'https://drive.google.com/thumbnail?id=15W7SKjbnL00aPyCAhoBMu4YuJ6ql0tGW&sz=w1600',
-    photoNote:'Early family archive portrait chosen for the childhood story; exact identities and date are still being confirmed.'
+    image:'https://drive.google.com/thumbnail?id=1T4IS4-px45gqs892SbXxOr5KlLfFpCgm&sz=w1600',
+    photoNote:'Family archive high-school graduation portrait labeled “Sonny” and 1942.'
   },
   20:{
-    image:'https://drive.google.com/thumbnail?id=1EocYIkNESEXDM4gA_kCPXtGnxYezQvR3&sz=w1600',
-    photoNote:'The Drive filename identifies this family photo as “Con, Sam, Marietta 1962.”',
+    image:'https://drive.google.com/thumbnail?id=1d68kjB_ZxVko4zeJAEXvAWkjV-rYDi9D&sz=w1600',
+    photoNote:'Family archive file titled “Momma & Poppa 1930.jpg” — young Sam with his parents.',
     locations:[{label:'Hoboken Waterfront',query:'Hoboken Waterfront, Hoboken, NJ',note:'A geographic anchor for the docks and longshoreman world behind the story. The exact pier is not yet identified.'}]
   },
   21:{
@@ -128,8 +128,8 @@ window.STORY_FEATURES={
     photoNote:'A playful family archive photograph that perfectly matches the physical-comedy energy of this story; exact date and identities are still being confirmed.'
   },
   24:{
-    image:'https://drive.google.com/thumbnail?id=1wkvva49S6KEDsi8oKHylaV87v0GTKe8a&sz=w1600',
-    photoNote:'Mid-century family portrait with a young boy; exact identities and date are still being confirmed.'
+    image:'https://drive.google.com/thumbnail?id=1sy-qANX47sewBzPNDTN2v4QzsB9DRdDE&sz=w1600',
+    photoNote:'Family archive file titled “Dad and me 1951.jpg” — a warm father-and-child image from the young-family years.'
   },
   25:{
     image:'https://drive.google.com/thumbnail?id=138JlhnXv8PEe2NGjPGMt_ol2InKzyjDQ&sz=w1600',
