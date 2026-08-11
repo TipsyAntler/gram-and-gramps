@@ -27,7 +27,6 @@ function initStoryFilters(){
     select.innerHTML=`<option value="">${facetDefaults[key]||'Any'}</option>`+values.map(value=>`<option value="${value}">${value} (${counts[value]})</option>`).join('');
   });
 
-  // Allow the family tree (and future archive pages) to link directly into a filtered story collection.
   const params=new URLSearchParams(location.search);
   const requestedSpeaker=params.get('speaker');
   if(['Gram','Gramps','Together'].includes(requestedSpeaker)){
@@ -83,13 +82,13 @@ function initStoryFilters(){
   if(clear)clear.addEventListener('click',()=>{
     speaker='All';
     $$('.filter-chip').forEach(b=>b.classList.toggle('active',b.dataset.filter==='All'));
-    selects.forEach(s=>s.value='');
+    selects.forEach(s=>s.value='';
     if(search)search.value='';
     applyFilters();
   });
   applyFilters();
 }
-function renderFeatured(){const t=$('#featuredStories');if(t)renderStories(t,[1,18,21,22,23,26].map(id=>STORIES.find(s=>s.id===id)))}
+function renderFeatured(){const t=$('#featuredStories');if(t)renderStories(t,[1,18,21,5,17,10].map(id=>STORIES.find(s=>s.id===id)))}
 function renderStoryPage(){const root=$('#storyPage');if(!root)return;const id=Number(new URLSearchParams(location.search).get('id')??1),s=STORIES.find(x=>x.id===id)||STORIES[1];document.title=`${s.title} — Gram & Gramps`;const related=STORIES.filter(x=>x.id!==s.id&&(x.group===s.group||x.era===s.era)).slice(0,3);root.innerHTML=`<section class="story-hero"><img src="${storyImage(s)}" alt=""><div class="story-hero-overlay"></div><div class="story-hero-copy wrap"><div class="eyebrow light">${padId(s.id)} · ${s.group} · ${duration(s.start,s.end)}</div><h1>${s.title}</h1><p>${s.teaser}</p></div></section><section class="section wrap story-layout"><div class="story-main"><div class="audio-box"><div><div class="eyebrow">Original recording · December 26, 2018</div><h2>Hear it in their voices</h2></div>${audioMarkup(s)}</div><div class="prose"><h2>About this story</h2><p>${s.teaser}</p><p class="note">This first site pass keeps the archive light: original audio, a short setup, and the people/places that help locate the memory. Full transcripts and historical annotations can be layered in story by story.</p></div></div><aside class="fact-panel"><div><span>Primary speaker</span><strong>${s.speaker}</strong></div><div><span>Era</span><strong>${s.era}</strong></div><div><span>Places</span><strong>${s.place}</strong></div><div><span>People mentioned</span><strong>${s.people}</strong></div></aside></section><section class="section wrap"><div class="section-head"><div><div class="eyebrow">Keep listening</div><h2>Related stories</h2></div></div><div class="story-grid compact">${related.map(storyCard).join('')}</div></section>`}
 function initMenu(){const b=$('.menu-toggle'),n=$('.site-nav');if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'))}
 document.addEventListener('DOMContentLoaded',()=>{initMenu();renderFeatured();initStoryFilters();renderStoryPage()});
