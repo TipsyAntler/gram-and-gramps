@@ -124,8 +124,8 @@ window.STORY_FEATURES={
     photoNote:'The archive filename identifies this photograph as “Sam 1947.jpg,” placing it right beside the era of the music collection.'
   },
   23:{
-    image:'https://drive.google.com/thumbnail?id=1kwxAuhGXrUoForYWCaDsAE-daSKJYfl4&sz=w1600',
-    photoNote:'A playful family archive photograph that perfectly matches the physical-comedy energy of this story; exact date and identities are still being confirmed.'
+    image:'https://drive.google.com/thumbnail?id=1T5UvQrgrGOAtP4Q4SfQmMu2uQTflucEt&sz=w1600',
+    photoNote:'Family archive file titled “Busch Gardens 1975.jpg” — Sam grinning in the stocks, an unusually perfect dated visual for this run of family accidents and physical comedy.'
   },
   24:{
     image:'https://drive.google.com/thumbnail?id=1sy-qANX47sewBzPNDTN2v4QzsB9DRdDE&sz=w1600',
