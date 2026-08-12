@@ -91,4 +91,27 @@
     if(STORY_FILTER_META[7]) Object.assign(STORY_FILTER_META[7],{when:['Later Years']});
     if(STORY_FILTER_META[9]) Object.assign(STORY_FILTER_META[9],{locations:['Washington']});
   }
+
+  // Canonical speaker labels for site metadata and quote attribution.
+  // Narrative/history copy keeps proper names where those names are the subject.
+  if(window.STORIES){
+    STORIES.forEach(s=>{
+      if(!s||!s.speaker)return;
+      s.speaker=s.speaker
+        .replace(/Mike Tridente/g,'Mike')
+        .replace(/Mike T\b/g,'Mike')
+        .replace(/Marietta/g,'Gram')
+        .replace(/\bSam\b/g,'Gramps');
+    });
+  }
+  if(window.STORY_FEATURES){
+    Object.values(STORY_FEATURES).forEach(f=>{
+      if(!f||!f.quoteBy)return;
+      f.quoteBy=f.quoteBy
+        .replace(/^Mike Tridente$/,'Mike')
+        .replace(/^Mike T$/,'Mike')
+        .replace(/^Marietta$/,'Gram')
+        .replace(/^Sam$/,'Gramps');
+    });
+  }
 })();
