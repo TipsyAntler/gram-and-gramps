@@ -1,3 +1,4 @@
+document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="assets/css/branding.css">');
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 function toSeconds(t){return t.split(':').map(Number).reduce((a,n)=>a*60+n,0)}
 function duration(a,b){let s=Math.max(0,toSeconds(b)-toSeconds(a)),m=Math.floor(s/60),sec=s%60;return `${m}:${String(sec).padStart(2,'0')}`}
