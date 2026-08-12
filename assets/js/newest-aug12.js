@@ -21,6 +21,14 @@
   });
 
   feature(8,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/Postcard%20SS%20Stevens%20and%20Stevens%20Center.jpg',focus:'50% 45%',mobileFocus:'50% 45%'});
+
+  // 012 — period Hoboken Good Government campaign flyer featuring Fred M. DeSapio.
+  feature(12,{
+    image:'https://drive.google.com/thumbnail?id=1uJZWlCGiz6P3UBxyNYmPKTbSgF1UtP8r&sz=w2400',
+    thumbFocus:'50% 43%',mobileThumbFocus:'50% 42%',
+    heroFocus:'50% 42%',mobileHeroFocus:'50% 42%'
+  });
+
   feature(15,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/StateLibQld%201%20127051%20Alcoa%20Pegasus%20%28ship%29.jpg',focus:'50% 50%',mobileFocus:'50% 50%'});
 
   feature(13,{
