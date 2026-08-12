@@ -4,8 +4,12 @@
   // 000 — "The Clan June 1972.jpg" from the family archive.
   feature(0,{image:'https://drive.google.com/thumbnail?id=1RTaE6kDeHiXuD9E8oQZlSqEf34MDPpWi&sz=w2200',focus:'50% 42%',mobileFocus:'50% 38%'});
 
-  feature(2,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/1979%20New%20Jersey%20license%20plate.jpg',focus:'50% 50%',mobileFocus:'50% 50%'});
-  feature(5,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/Provenzano%2C%20Anthony%20-%20Born-%20%28BLANK%29%2C%20Naturalized-%20%28BLANK%29%20-%20DPLA%20-%20e07572c01b19d89c0089c54332babacd.jpg',focus:'50% 42%',mobileFocus:'50% 42%'});
+  // 002 — a period car with a visible New Jersey plate, closer to the feel of the story than a plate-only image.
+  feature(2,{image:'https://i.pinimg.com/originals/13/21/a8/1321a8989b14a9a8a764e9db9f547ef2.jpg',focus:'63% 57%',mobileFocus:'68% 58%'});
+
+  // 005 — actual photo of Anthony “Tony Pro” Provenzano.
+  feature(5,{image:'https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/03/1200/675/Anthony-Provenzano.jpg?tl=1&ve=1',focus:'50% 38%',mobileFocus:'50% 32%'});
+
   feature(8,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/Postcard%20SS%20Stevens%20and%20Stevens%20Center.jpg',focus:'50% 45%',mobileFocus:'50% 45%'});
   feature(15,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/StateLibQld%201%20127051%20Alcoa%20Pegasus%20%28ship%29.jpg',focus:'50% 50%',mobileFocus:'50% 50%'});
 
@@ -18,8 +22,8 @@
   // 019 — move the 1932 First Communion image here.
   feature(19,{image:'https://drive.google.com/thumbnail?id=1c4fS4jBRjPwQsQDhCHp2Z-Pfv075R8vO&sz=w2000',focus:'50% 26%',mobileFocus:'50% 20%'});
 
-  // 025 — also use the former 013 First Communion image, per latest note.
-  feature(25,{image:'https://drive.google.com/thumbnail?id=1c4fS4jBRjPwQsQDhCHp2Z-Pfv075R8vO&sz=w2000',focus:'50% 26%',mobileFocus:'50% 20%'});
+  // 025 — Mike and Alaina's wedding photo from the family archive.
+  feature(25,{image:'https://drive.google.com/thumbnail?id=18yJRO_SRwNMJFvU-C-p-bqXyyz1njoGb&sz=w2200',focus:'50% 42%',mobileFocus:'50% 38%'});
 
   feature(24,{locations:[{
     label:'St. Mary’s Hospital',
