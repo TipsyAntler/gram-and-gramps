@@ -9,6 +9,9 @@
   feature(8,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/Postcard%20SS%20Stevens%20and%20Stevens%20Center.jpg',focus:'50% 45%',mobileFocus:'50% 45%'});
   feature(15,{image:'https://commons.wikimedia.org/wiki/Special:FilePath/StateLibQld%201%20127051%20Alcoa%20Pegasus%20%28ship%29.jpg',focus:'50% 50%',mobileFocus:'50% 50%'});
 
+  // 013 — Sam on horseback during the 1952 California trip.
+  feature(13,{image:'https://drive.google.com/thumbnail?id=15SANJvwMArHtcW8Nn_gx7cDA_pdIKy-v&sz=w2200',focus:'50% 45%',mobileFocus:'50% 38%'});
+
   // 016 — use Sam's 1942 high-school graduation portrait.
   feature(16,{image:'https://drive.google.com/thumbnail?id=1T4IS4-px45gqs892SbXxOr5KlLfFpCgm&sz=w2000',focus:'50% 28%',mobileFocus:'50% 22%'});
 
