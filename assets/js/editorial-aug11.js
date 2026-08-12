@@ -16,6 +16,7 @@
   story(25,{title:"Getting Stopped for Being Cute & for Gramps' Navy Vet Hat"});
   story(26,{people:'Dr. Peluso; Mrs. Peluso; Dr. Peluso’s nephews; Isabel; Sam'});
 
+  feature(5,{image:'https://drive.google.com/thumbnail?id=1_7T6gl65_XMXoGxYPbGLBOzKPiK3e8Ey&sz=w2200',focus:'50% 40%',mobileFocus:'50% 34%'});
   feature(6,{image:'https://drive.google.com/thumbnail?id=1uDkWC1lfMEfI4SRvEZ7ov0Cl_iW1Wmvt&sz=w1800',quote:'“If somebody spoke to me with a dialect, I don’t know why, I would just answer them with their dialect.”',quoteBy:'Marietta',focus:'50% 30%',mobileFocus:'50% 20%'});
   feature(7,{quote:'“I seem to get in trouble all the time.”',quoteBy:'Marietta'});
   feature(8,{quote:'“I’m taking Stevens to court.”',quoteBy:'Marietta'});
