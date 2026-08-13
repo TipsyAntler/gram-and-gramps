@@ -21,7 +21,7 @@
     current=-1;
     nowNumber.textContent='FULL';
     nowTitle.textContent='The complete recording';
-    nowMeta.textContent='December 26, 2018 · 1:55:52';
+    nowMeta.textContent='December 26, 2018 · 1:55:56';
     frame.src=FULL_RECORDING.preview;
     fallback.href=FULL_RECORDING.url;
     paint();
