@@ -49,9 +49,9 @@
     }
   }
 
-  // The 1945 V-J Day / lost-hat entry uses Sam's hat image; this older Drive
-  // file requires its resource key in order to render reliably outside Drive.
-  setPhoto('1945','https://drive.google.com/thumbnail?id=0BxGndm7F7w5EUkpGUEFVNXc3SU0&resourcekey=0-7fgK9ewQNN7U0OpOiPltRg&sz=w1600','Sam’s Navy hat, connected to the Vancouver V-J Day story.');
+  // Give the 1945 V-J Day entry its own visual: a Vancouver victory parade
+  // photographed on Aug. 14, 1945, rather than reusing another Sam/hat portrait.
+  setPhoto('1945','https://zolimacitymag.com/wp-content/uploads/2017/06/1400_933.pender_1945.jpg','Victory parade on Pender Street in Vancouver on V-J Day, August 14, 1945.');
 
   // Flag any accidental exact-image reuse during future edits.
   const seen=new Set();
