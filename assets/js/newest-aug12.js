@@ -1,15 +1,17 @@
 (function(){
   const feature=(id,patch)=>{if(!window.STORY_FEATURES)return;window.STORY_FEATURES[id]=Object.assign({},window.STORY_FEATURES[id]||{},patch)};
+  const story=(id,patch)=>{const s=window.STORIES&&window.STORIES.find(x=>x.id===id);if(s)Object.assign(s,patch)};
 
   feature(0,{image:'https://drive.google.com/thumbnail?id=1RTaE6kDeHiXuD9E8oQZlSqEf34MDPpWi&sz=w2200',focus:'50% 42%',mobileFocus:'50% 38%'});
 
   feature(2,{image:'https://i.pinimg.com/originals/13/21/a8/1321a8989b14a9a8a764e9db9f547ef2.jpg',focus:'63% 57%',mobileFocus:'68% 58%'});
 
   // 003 — family archive image with the sign behind Gram.
+  story(3,{teaser:'Even children weren’t safe from the consequences of crossing Gram.'});
   feature(3,{
     image:'https://drive.google.com/thumbnail?id=1EEmMR9z6LDnW1ny6_JyGzMT3Hzgqqswx&sz=w2400',
     thumbFocus:'50% 42%',mobileThumbFocus:'50% 40%',
-    heroFocus:'50% 43%',mobileHeroFocus:'58% 40%'
+    heroFocus:'50% 43%',mobileHeroFocus:'60% 34%'
   });
 
   feature(5,{image:'https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/03/1200/675/Anthony-Provenzano.jpg?tl=1&ve=1',focus:'50% 38%',mobileFocus:'50% 32%'});
