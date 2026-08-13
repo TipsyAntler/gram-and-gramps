@@ -39,9 +39,19 @@
   setPhoto('1991','https://drive.google.com/thumbnail?id=1byvsnj3nlTkGbYV71XBO2O7R_azGjCZ1&sz=w1800','Sam and Marietta’s Bridle Lane home in Washington, New Jersey.');
   setPhoto('2022','https://drive.google.com/thumbnail?id=1zyRuD96_loQ-QS9p8Gy0TOdbIPPQgdS4&sz=w1600','Sam and Marietta together in 2022.',{kicker:'Seventy-five years',replaceFirst:true});
 
-  // The 1945 V-J Day / lost-hat entry previously reused the same Navy portrait
-  // already shown in the 1943–46 service entry. Use a different hat image here.
-  setPhoto('1945','https://drive.google.com/thumbnail?id=0BxGndm7F7w5EUkpGUEFVNXc3SU0&sz=w1600','Sam’s Navy hat, connected to the Vancouver V-J Day story.');
+  // Use a true wartime-courtship photograph instead of a second wedding-era portrait.
+  const courtship1942=eventFor('1942');
+  if(courtship1942){
+    const courtshipImages=courtship1942.querySelectorAll('.life-photo img');
+    if(courtshipImages[1]){
+      courtshipImages[1].src='https://drive.google.com/thumbnail?id=1Bkvn0FCdc3FvAbRivBvNvVSVfRrpdxqL&sz=w1200';
+      courtshipImages[1].alt='Sam and Marietta together in 1944 during their wartime courtship.';
+    }
+  }
+
+  // The 1945 V-J Day / lost-hat entry uses Sam's hat image; this older Drive
+  // file requires its resource key in order to render reliably outside Drive.
+  setPhoto('1945','https://drive.google.com/thumbnail?id=0BxGndm7F7w5EUkpGUEFVNXc3SU0&resourcekey=0-7fgK9ewQNN7U0OpOiPltRg&sz=w1600','Sam’s Navy hat, connected to the Vancouver V-J Day story.');
 
   // Flag any accidental exact-image reuse during future edits.
   const seen=new Set();
