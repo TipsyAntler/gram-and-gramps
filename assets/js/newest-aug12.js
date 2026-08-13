@@ -9,7 +9,7 @@
   feature(3,{
     image:'https://drive.google.com/thumbnail?id=1EEmMR9z6LDnW1ny6_JyGzMT3Hzgqqswx&sz=w2400',
     thumbFocus:'50% 42%',mobileThumbFocus:'50% 40%',
-    heroFocus:'50% 43%',mobileHeroFocus:'50% 40%'
+    heroFocus:'50% 43%',mobileHeroFocus:'58% 40%'
   });
 
   feature(5,{image:'https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/03/1200/675/Anthony-Provenzano.jpg?tl=1&ve=1',focus:'50% 38%',mobileFocus:'50% 32%'});
