@@ -4,6 +4,36 @@
   const count=document.querySelector('#timelineCount');
   if(!buttons.length||!events.length)return;
 
+  function eventFor(year, kicker){
+    return events.find(event=>{
+      const y=event.querySelector('.life-event-date strong')?.textContent.trim();
+      const k=event.querySelector('.life-kicker')?.textContent.trim();
+      return y===year && (!kicker || k===kicker);
+    });
+  }
+  function setPhoto(year, src, alt, options={}){
+    const event=eventFor(year, options.kicker);
+    if(!event)return;
+    const card=event.querySelector('.life-event-card');
+    let photo=card.querySelector('.life-photo');
+    if(!photo){
+      photo=document.createElement('div');
+      photo.className='life-photo';
+      const links=card.querySelector('.life-story-links');
+      card.insertBefore(photo,links||null);
+    }
+    if(options.replaceFirst && photo.querySelector('img')){
+      const img=photo.querySelector('img'); img.src=src; img.alt=alt; return;
+    }
+    photo.className='life-photo';
+    photo.innerHTML=`<img src="${src}" alt="${alt}">`;
+  }
+
+  setPhoto('1977','https://upload.wikimedia.org/wikipedia/commons/3/35/Hoboken_PO_jeh.jpg','Hoboken Main Post Office on River Street.');
+  setPhoto('1981','https://drive.google.com/thumbnail?id=1GnEj5mgA_ZJ5b7b3DZuXxn1fiBGifidx&sz=w1600','Sam and Marietta during their Manalapan years.');
+  setPhoto('1982','https://drive.google.com/thumbnail?id=16HmxOSReFeMPOmDpTCrNekWD25LqU4oR&sz=w1600','Family photograph from 1982.');
+  setPhoto('2022','https://drive.google.com/thumbnail?id=1zyRuD96_loQ-QS9p8Gy0TOdbIPPQgdS4&sz=w1600','Sam and Marietta together in 2022.',{kicker:'Seventy-five years',replaceFirst:true});
+
   function apply(filter){
     let visible=0;
     events.forEach(event=>{
