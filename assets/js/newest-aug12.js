@@ -11,7 +11,9 @@
   feature(3,{
     image:'https://drive.google.com/thumbnail?id=1EEmMR9z6LDnW1ny6_JyGzMT3Hzgqqswx&sz=w2400',
     thumbFocus:'50% 42%',mobileThumbFocus:'50% 40%',
-    heroFocus:'50% 43%',mobileHeroFocus:'60% 34%'
+    heroFocus:'50% 43%',mobileHeroFocus:'60% 34%',
+    quote:'“I flung open my door and knocked one guy flat on his ass.”',
+    quoteBy:'Gram'
   });
 
   feature(5,{image:'https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2022/03/1200/675/Anthony-Provenzano.jpg?tl=1&ve=1',focus:'50% 38%',mobileFocus:'50% 32%'});
@@ -55,5 +57,24 @@
   if(window.STORY_FEATURES&&window.STORY_FEATURES[24]){
     delete window.STORY_FEATURES[24].context;
     delete window.STORY_FEATURES[24].contextTitle;
+  }
+
+  if(window.STORY_RESEARCH){
+    window.STORY_RESEARCH[5]={cards:[
+      {
+        kicker:'Who was Tony Pro?',
+        title:'Anthony “Tony Pro” Provenzano',
+        body:'Tony Provenzano was a powerful North Jersey Teamsters figure who rose through Local 560 and became nationally known for organized-crime ties, labor violence and federal prosecutions. Which makes Gram’s completely matter-of-fact memory of him walking into Dr. Peluso’s dental office feel a little different.',
+        link:'https://time.com/archive/6812606/labor-tony-pro-takes-a-tumble/',
+        linkLabel:'TIME · 1963 ↗'
+      },
+      {
+        kicker:'The Jimmy Hoffa connection',
+        title:'A prime suspect in one of America’s great unsolved mysteries',
+        body:'Jimmy Hoffa believed he was headed to a meeting with Provenzano and Detroit mob figure Anthony Giacalone on July 30, 1975 — the day Hoffa disappeared. Contemporary reporting identified Tony Pro as a prime suspect. He was never charged in Hoffa’s disappearance, which remains unsolved. Decades later, Stephen Graham played Provenzano opposite Al Pacino’s Hoffa in Martin Scorsese’s The Irishman.',
+        link:'https://time.com/archive/6817209/crime-hoffa-case-closing-in/',
+        linkLabel:'TIME · Hoffa case, 1975 ↗'
+      }
+    ]};
   }
 })();
