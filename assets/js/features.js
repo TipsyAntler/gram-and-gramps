@@ -18,7 +18,9 @@ window.STORY_FEATURES={
   },
   3:{
     image:'https://drive.google.com/thumbnail?id=19bgv_tjhUNOnBwMx3cqe-edQ-GpGiGwN&sz=w1600',
-    photoNote:'Family archive childhood snapshot; exact child and date are still being confirmed.'
+    photoNote:'Family archive childhood snapshot; exact child and date are still being confirmed.',
+    quote:'“I flung open my door and knocked one guy flat on his ass.”',
+    quoteBy:'Gram'
   },
   4:{
     image:'https://drive.google.com/thumbnail?id=1q9MwuVSoGHMf3uQK8c79OWD98IQhj-Kt&sz=w1600',
