@@ -35,12 +35,12 @@
   // Pull quote for 002.
   feature(2,{quote:'“I bent it right in half, right in half… So that was that incident.”',quoteBy:'Gram'});
 
-  // Mobile hero crops: small upward nudges to keep faces clear.
-  feature(1,{mobileHeroFocus:'50% 18%'});
-  feature(17,{mobileHeroFocus:'50% 18%'});
-  feature(21,{mobileHeroFocus:'50% 18%'});
+  // Mobile hero crops: move the portraits upward in-frame so faces clear the metadata cards.
+  feature(1,{mobileHeroFocus:'50% 32%'});
+  feature(17,{mobileHeroFocus:'50% 30%'});
+  feature(21,{mobileHeroFocus:'50% 30%'});
   feature(25,{mobileHeroFocus:'50% 32%'});
-  feature(26,{mobileHeroFocus:'50% 18%'});
+  feature(26,{mobileHeroFocus:'50% 32%'});
 
   // 012: use the reliable family-archive hero instead of the flyer asset that was failing to load.
   feature(12,{
@@ -49,14 +49,20 @@
     heroFocus:'50% 42%',mobileHeroFocus:'50% 42%'
   });
 
-  // Dr. Peluso map treatment.
+  // Dr. Peluso map treatment: keep exactly one short-caption card wherever the office is mapped.
   const peluso={label:'Dr. Charles Peluso’s dental office',query:'533 Adams Street, Hoboken, NJ',note:'Dr. Charles Peluso’s dental office.'};
-  [1,4,5,26].forEach(id=>addLocation(id,peluso));
-  if(window.STORY_FEATURES&&window.STORY_FEATURES[26]&&Array.isArray(window.STORY_FEATURES[26].locations)){
-    window.STORY_FEATURES[26].locations=window.STORY_FEATURES[26].locations.map(loc=>
-      loc.query==='533 Adams Street, Hoboken, NJ'?Object.assign({},loc,{label:'Dr. Charles Peluso’s dental office',note:'Dr. Charles Peluso’s dental office.'}):loc
-    );
-  }
+  [1,4,5,26].forEach(id=>{
+    if(!window.STORY_FEATURES)return;
+    const f=window.STORY_FEATURES[id]=Object.assign({},window.STORY_FEATURES[id]||{});
+    const locations=Array.isArray(f.locations)?f.locations:[];
+    f.locations=[
+      ...locations.filter(loc=>
+        loc.query!=='533 Adams Street, Hoboken, NJ' &&
+        !String(loc.label||'').toLowerCase().includes('peluso')
+      ),
+      peluso
+    ];
+  });
 
   // Correct wording on the Golden Gate map.
   if(window.STORY_FEATURES&&window.STORY_FEATURES[15]&&Array.isArray(window.STORY_FEATURES[15].locations)){
