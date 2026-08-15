@@ -5,6 +5,7 @@
 
   const OLD_BASE = 'https://tipsyantler.github.io/gram-and-gramps/';
   const NEW_BASE = 'https://samandmarietta.com/';
+  const GRAMPS_ID = 'I182064743652';
 
   async function rewriteTreeLinks() {
     try {
@@ -39,6 +40,16 @@
       });
 
       params.set('url', 'data:application/zip;base64,' + updatedBase64);
+
+      // The async domain rewrite must preserve the intended opening state.
+      // Topola expects the internal person ID without GEDCOM @ delimiters.
+      params.set('indi', GRAMPS_ID);
+      params.set('c', 'n');
+      params.set('i', 'h');
+      params.set('s', 'h');
+      params.set('p', 'h');
+      params.set('sidePanel', 'true');
+
       const updatedTopolaUrl = base + params.toString();
       frame.src = updatedTopolaUrl;
       if (openButton) openButton.href = updatedTopolaUrl;
