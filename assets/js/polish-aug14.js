@@ -20,6 +20,9 @@
   window.STORIES.forEach(s=>{
     if(!s||!s.people)return;
     s.people=s.people
+      .replace(/Christine Fahey/g,'Christine')
+      .replace(/Mike Fahey/g,'Mike')
+      .replace(/\bMichael\b/g,'Mike')
       .replace(/Mike Tridente/g,'Mike')
       .replace(/Mike T\b/g,'Mike')
       .replace(/Marietta/g,'Gram')
@@ -28,7 +31,7 @@
 
   // Story metadata / copy changes from the final story-by-story review.
   story(7,{era:'Family travel years'});
-  story(19,{title:'Gramps Childhood: First Jobs & Street Games'});
+  story(19,{title:'Gramps Childhood: First Jobs & Street Games',people:'Mama; Papa'});
   story(24,{teaser:'Gram and Gramps remember the day Dad was born.'});
   story(25,{teaser:'Being stopped for looking cute, free meals thanks to Gramps’ Veteran Hat, and one more wartime family story.'});
 
