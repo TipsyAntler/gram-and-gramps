@@ -35,19 +35,20 @@
   // Pull quote for 002.
   feature(2,{quote:'“I bent it right in half, right in half… So that was that incident.”',quoteBy:'Gram'});
 
-  // Mobile hero crops: substantial shifts so faces sit above the metadata cards.
-  feature(1,{mobileHeroFocus:'50% 48%'});
-  feature(17,{mobileHeroFocus:'50% 44%'});
-  feature(21,{mobileHeroFocus:'50% 48%'});
-  feature(25,{mobileHeroFocus:'50% 32%'});
-  feature(26,{mobileHeroFocus:'50% 46%'});
-
-  // 012: use the reliable family-archive hero instead of the flyer asset that was failing to load.
+  // Final image swaps from the review pass.
+  feature(0,{image:'https://drive.google.com/thumbnail?id=1MkVtm6BYCSMF6qHqlESwvqW7jZ6TjNMJ&sz=w2200'});
   feature(12,{
-    image:'https://drive.google.com/thumbnail?id=1fwe0l1E5rrNf0e9EtvZ5JVRfEtQXPpGa&sz=w1600',
+    image:'https://drive.google.com/thumbnail?id=1H19RjxSpTrpN5mFapaFWlDdwvUDZidHh&sz=w2400',
     thumbFocus:'50% 43%',mobileThumbFocus:'50% 42%',
     heroFocus:'50% 42%',mobileHeroFocus:'50% 42%'
   });
+
+  // Mobile hero crops: stronger upward-in-frame shifts so faces clear the metadata cards.
+  feature(1,{mobileHeroFocus:'50% 68%'});
+  feature(17,{mobileHeroFocus:'50% 62%'});
+  feature(21,{mobileHeroFocus:'50% 66%'});
+  feature(25,{mobileHeroFocus:'50% 32%'});
+  feature(26,{mobileHeroFocus:'50% 66%'});
 
   // Dr. Peluso map treatment: keep exactly one short-caption card wherever the office is mapped.
   const peluso={label:'Dr. Charles Peluso’s dental office',query:'533 Adams Street, Hoboken, NJ',note:'Dr. Charles Peluso’s dental office.'};
