@@ -93,9 +93,11 @@
   }
 
   if(window.STORY_RESEARCH){
-    // 014: name both ship cards consistently.
+    // 014: name the two ship cards consistently.
     const r14=window.STORY_RESEARCH[14];
-    if(r14&&Array.isArray(r14.cards))r14.cards.forEach(card=>{card.kicker='Gramps’ Ship';});
+    if(r14&&Array.isArray(r14.cards))r14.cards.forEach(card=>{
+      if(card.title==='SS Alcoa Pegasus'||card.title==='SS West Cusseta')card.kicker='Gramps’ Ship';
+    });
 
     // 022: revised Sinatra framing.
     const r22=window.STORY_RESEARCH[22];
