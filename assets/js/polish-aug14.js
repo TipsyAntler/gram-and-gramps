@@ -35,12 +35,12 @@
   // Pull quote for 002.
   feature(2,{quote:'“I bent it right in half, right in half… So that was that incident.”',quoteBy:'Gram'});
 
-  // Mobile hero crops: move the portraits upward in-frame so faces clear the metadata cards.
-  feature(1,{mobileHeroFocus:'50% 32%'});
-  feature(17,{mobileHeroFocus:'50% 30%'});
-  feature(21,{mobileHeroFocus:'50% 30%'});
+  // Mobile hero crops: substantial shifts so faces sit above the metadata cards.
+  feature(1,{mobileHeroFocus:'50% 48%'});
+  feature(17,{mobileHeroFocus:'50% 44%'});
+  feature(21,{mobileHeroFocus:'50% 48%'});
   feature(25,{mobileHeroFocus:'50% 32%'});
-  feature(26,{mobileHeroFocus:'50% 32%'});
+  feature(26,{mobileHeroFocus:'50% 46%'});
 
   // 012: use the reliable family-archive hero instead of the flyer asset that was failing to load.
   feature(12,{
