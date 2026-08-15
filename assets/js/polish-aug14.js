@@ -43,9 +43,9 @@
     heroFocus:'50% 42%',mobileHeroFocus:'50% 42%'
   });
 
-  // Mobile hero crops: stronger upward-in-frame shifts so faces clear the metadata cards.
-  feature(1,{mobileHeroFocus:'50% 68%'});
-  feature(17,{mobileHeroFocus:'50% 62%'});
+  // Mobile hero crops: final per-image tuning from live-device screenshots.
+  feature(1,{mobileHeroFocus:'50% 88%'});
+  feature(17,{mobileHeroFocus:'50% 56%'});
   feature(21,{mobileHeroFocus:'50% 66%'});
   feature(25,{mobileHeroFocus:'50% 32%'});
   feature(26,{mobileHeroFocus:'50% 66%'});
