@@ -21,7 +21,7 @@
     if(!s||!s.people)return;
     s.people=s.people
       .replace(/Christine Fahey/g,'Christine')
-      .replace(/Mike Fahey/g,'Mike')
+      .replace(/Mike Fahey/g,'Mike F')
       .replace(/\bMichael\b/g,'Mike')
       .replace(/Mike Tridente/g,'Mike')
       .replace(/Mike T\b/g,'Mike')
