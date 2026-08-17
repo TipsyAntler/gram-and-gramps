@@ -1,3 +1,17 @@
+(() => {
+  const GA_ID='G-16TYFHCHM5';
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};
+  window.gtag('js',new Date());
+  window.gtag('config',GA_ID);
+  if(!document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${GA_ID}"]`)){
+    const s=document.createElement('script');
+    s.async=true;
+    s.src=`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    document.head.appendChild(s);
+  }
+})();
+
 document.head.insertAdjacentHTML('beforeend','<link rel="stylesheet" href="assets/css/branding.css">');
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 function toSeconds(t){return t.split(':').map(Number).reduce((a,n)=>a*60+n,0)}
